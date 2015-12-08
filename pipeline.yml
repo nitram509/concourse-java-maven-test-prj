@@ -11,6 +11,6 @@ jobs:
     plan:
     - get: git-repo
       trigger: true
-    - task: unit
+    - task: maven-package
       privileged: true
-      file: git-repo/pipeline/unit-test.yml
+      file: git-repo/pipeline/maven-package.yml
