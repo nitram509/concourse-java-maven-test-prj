@@ -7,7 +7,7 @@ inputs:
 
 outputs:
   - name: jar-file
-    path: git-repo/target/concourse-java-maven-test-prj-0.0.1-SNAPSHOT.jar
+    path: git-repo/target
 
 run:
   path: mvn
