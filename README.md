@@ -3,3 +3,11 @@
 
 ## Java, Maven, evtl. Spring Boot
 
+## Usage
+
+```
+maven package
+vagrant init concourse/lite
+vagrant up
+
+```
