@@ -7,8 +7,3 @@ inputs:
 
 run:
   path: ls
-run:
-  path: pwd
-run:
-  path: mvn
-  args: ["-X", "test"]
