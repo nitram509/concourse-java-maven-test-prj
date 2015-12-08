@@ -1,6 +1,6 @@
 platform: linux
 
-image: docker:///ubuntu#14.04
+image: docker:///maven#3.3.3
 
 inputs:
 - name: git-repo
