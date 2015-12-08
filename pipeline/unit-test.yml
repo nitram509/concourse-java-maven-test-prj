@@ -7,5 +7,4 @@ inputs:
 
 run:
   path: mvn
-  privileged: true
   args: ["-X", "test"]
