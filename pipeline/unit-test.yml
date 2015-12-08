@@ -3,7 +3,7 @@ platform: linux
 image: docker:///ubuntu#14.04
 
 inputs:
-- name: concourse-java-maven-test-prj-repo
+- name: git-repo
 
 run:
   path: mvn
