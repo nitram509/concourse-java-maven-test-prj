@@ -6,4 +6,4 @@ inputs:
 - name: git-repo
 
 run:
-  path: ls
+  path: pwd
