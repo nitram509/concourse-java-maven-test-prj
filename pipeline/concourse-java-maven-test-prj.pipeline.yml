@@ -19,4 +19,4 @@ jobs:
     - get: concourse-java-maven-test-prj-repo
       trigger: true
     - task: unit
-      file: pipeline/concourse-java-maven-test-prj.tasks.unit.yml
+      file: ./pipeline/concourse-java-maven-test-prj.tasks.unit.yml
