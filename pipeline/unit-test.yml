@@ -6,5 +6,5 @@ inputs:
 - name: git-repo
 
 run:
-  path: find
-  args: ["."]
+  path: mvn
+  args: ["-f", "git-repo/pom.xml"]
