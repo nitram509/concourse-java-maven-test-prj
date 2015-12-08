@@ -1,6 +1,6 @@
 
 resources:
-  - name: concourse-java-maven-test-prj-repo
+  - name: git-repo
     type: git
     source:
       uri: https://github.com/nitram509/concourse-java-maven-test-prj.git
@@ -16,7 +16,7 @@ resources:
 jobs:
   - name: maven
     plan:
-    - get: concourse-java-maven-test-prj-repo
+    - get: git-repo
       trigger: true
     - task: unit
-      file: pipeline/unit-test.yml
+      file: git-repo/pipeline/unit-test.yml
