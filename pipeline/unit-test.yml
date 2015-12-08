@@ -7,4 +7,4 @@ inputs:
 
 run:
   path: mvn
-  args: ["-f", "git-repo/pom.xml"]
+  args: ["-f", "git-repo/pom.xml", "test"]
