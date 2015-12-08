@@ -3,8 +3,12 @@ platform: linux
 image: docker:///maven#3.3.3
 
 inputs:
-- name: git-repo
+  name: git-repo
+
+outputs:
+  name: jar-file
+  path: git-repo/target/concourse-java-maven-test-prj-0.0.1-SNAPSHOT.jar
 
 run:
   path: mvn
-  args: ["-f", "git-repo/pom.xml", "test"]
+  args: ["-f", "git-repo/pom.xml", "package"]

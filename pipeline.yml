@@ -6,13 +6,6 @@ resources:
       uri: https://github.com/nitram509/concourse-java-maven-test-prj.git
       branch: master
 
-  - name: version
-    type: semver
-    source:
-      bucket: concourse-java-maven-test-prj-pipeline-artifacts
-      key: current-version
-      initial_version: 1.0.0
-
 jobs:
   - name: maven
     plan:
