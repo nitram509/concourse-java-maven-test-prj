@@ -7,4 +7,4 @@ inputs:
 
 run:
   path: mvn
-  args: ["test"]
+  args: ["-X", "test"]
