@@ -12,7 +12,7 @@ resources:
 
 
 jobs:
-  - name: maven package
+  - name: maven-package
     plan:
     - get: git-repo
       trigger: true
@@ -24,7 +24,8 @@ jobs:
     plan:
     - aggregate:
       - get: git-repo
-        passed: [maven package]
+        trigger: true
+        passed: [maven-package]
       - get: time
     - task: rename-file
       file: git-repo/pipeline/rename-file.yml
