@@ -13,7 +13,6 @@ resources:
 
 jobs:
   - name: maven package
-    serial_groups: [version]
     plan:
     - get: git-repo
       trigger: true
@@ -22,7 +21,6 @@ jobs:
       file: git-repo/pipeline/maven-package.yml
 
   - name: rename file
-    serial_groups: [version]
     plan:
     - aggregate:
       - get: git-repo
