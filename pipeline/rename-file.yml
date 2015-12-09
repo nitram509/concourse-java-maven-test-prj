@@ -1,0 +1,14 @@
+platform: linux
+
+image: docker:///maven#3.3.3
+
+inputs:
+  - name: time
+
+outputs:
+  - name: jar-file
+    path: git-repo/target
+
+run:
+  path: mv
+  args: ["git-repo/target/concourse-java-maven-test-prj-0.0.1-SNAPSHOT.jar", "git-repo/target/concourse-java-maven-test-prj-{{time}}.jar"]

@@ -5,12 +5,24 @@ resources:
     source:
       uri: https://github.com/nitram509/concourse-java-maven-test-prj.git
       branch: master
+  - name: time
+    type: time
+    source:
+      interval: 60s
+
 
 jobs:
-  - name: maven
+  - name: maven package
     plan:
     - get: git-repo
       trigger: true
     - task: maven-package
       privileged: true
       file: git-repo/pipeline/maven-package.yml
+
+  - name: rename file
+    plan:
+    - get: time
+      trigger: false
+    - task: rename-file
+      file: git-repo/pipeline/rename-file.yml
