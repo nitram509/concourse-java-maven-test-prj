@@ -4,6 +4,8 @@ image: docker:///maven#3.3.3
 
 inputs:
   - name: time
+  - name: jar-file
+    path: git-repo/target
 
 outputs:
   - name: jar-file
