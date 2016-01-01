@@ -11,4 +11,5 @@ outputs:
 
 run:
   path: mvn
-  args: ["-f", "git-repo/pom.xml", "package"]
+  args: ["-f", "git-repo/pom.xml", "-DskipTests=true", "package"]
+  put: jar-file
