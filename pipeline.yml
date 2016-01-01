@@ -9,6 +9,8 @@ resources:
     type: time
     source:
       interval: 60s
+  - name: jar-file
+    type: archive
 
 
 jobs:
@@ -19,6 +21,7 @@ jobs:
     - task: maven-package
       privileged: true
       file: git-repo/pipeline/maven-package.yml
+    - put: jar-file
 
   - name: rename file
     plan:

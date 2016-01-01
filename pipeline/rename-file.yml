@@ -10,5 +10,7 @@ outputs:
   - name: jar-file
 
 run:
-  path: mv
-  args: ["jar-file/concourse-java-maven-test-prj-0.0.1-SNAPSHOT.jar", "jar-file/concourse-java-maven-test-prj-{{time}}.jar"]
+#   path: mv
+#   args: ["jar-file/concourse-java-maven-test-prj-0.0.1-SNAPSHOT.jar", "jar-file/concourse-java-maven-test-prj-{{time}}.jar"]
+  path: find
+  args: ["."]
