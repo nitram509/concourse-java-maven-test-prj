@@ -23,7 +23,7 @@ jobs:
   - name: rename file
     plan:
     - aggregate:
-      - get: git-repo
+      - get: jar-file
         trigger: true
         passed: [maven-package]
       - get: time
