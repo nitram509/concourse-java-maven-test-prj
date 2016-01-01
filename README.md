@@ -16,8 +16,13 @@ The following requirements the pipeline must address:
 ## Usage
 
 ```
+# build java project
 maven package
+
+# prepare vagrant box
 vagrant init concourse/lite
 vagrant up
 
+# upload pipeline
+fly set-pipeline -p concourse-java-maven-test-prj -c ./pipeline.yml
 ```
