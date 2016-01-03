@@ -16,21 +16,22 @@ resources:
 jobs:
   - name: maven-package
     plan:
-    - get: git-repo
-      trigger: true
+    - aggregate:
+      - get: git-repo
+        trigger: true
+      - get: time
     - task: maven-package
       privileged: true
       file: git-repo/pipeline/maven-package.yml
-    - put: jar-file
-      params:
-        from: git-repo/target/*.jar
-
-  - name: rename file
-    plan:
-    - aggregate:
-      - get: jar-file
-        trigger: true
-        passed: [maven-package]
-      - get: time
     - task: rename-file
       file: git-repo/pipeline/rename-file.yml
+
+#   - name: rename file
+#     plan:
+#     - aggregate:
+#       - get: jar-file
+#         trigger: true
+#         passed: [maven-package]
+#       - get: time
+#     - task: rename-file
+#       file: git-repo/pipeline/rename-file.yml
