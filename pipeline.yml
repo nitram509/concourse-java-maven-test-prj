@@ -22,6 +22,8 @@ jobs:
       privileged: true
       file: git-repo/pipeline/maven-package.yml
     - put: jar-file
+      params:
+        from: git-repo/target/*.jar
 
   - name: rename file
     plan:
