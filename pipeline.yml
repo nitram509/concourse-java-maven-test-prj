@@ -9,8 +9,6 @@ resources:
     type: time
     source:
       interval: 60s
-  - name: jar-file
-    type: archive
 
 
 jobs:
