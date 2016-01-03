@@ -3,6 +3,7 @@ platform: linux
 image: docker:///maven#3.3.3
 
 inputs:
+  - name: time
   - name: jar-file
 
 outputs:
