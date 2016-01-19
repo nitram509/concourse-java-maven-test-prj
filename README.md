@@ -7,8 +7,9 @@ The following requirements the pipeline must address:
 
 1. use [Concourse CI](http://concourse.ci/)
 2. build a Java executable jar file
-3. include a version number in the final file to run
+3. optional: include a version number in the final file to run
 4. build a docker image
+   * optional: tag docker image version (same as above)
 5. publish a docker image
 
 ## Java, Maven, evtl. Spring Boot
