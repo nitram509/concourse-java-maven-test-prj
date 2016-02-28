@@ -1,6 +1,10 @@
 platform: linux
 
-image: docker:///maven#3.3.3
+image_resource:
+  type: docker-image
+  source:
+    repository: alpine
+    tag: latest
 
 inputs:
   - name: time

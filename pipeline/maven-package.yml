@@ -1,13 +1,17 @@
 platform: linux
 
-image: docker:///maven#3.3.3
+image_resource:
+  type: docker-image
+  source:
+    repository: nitram509/alpine-oraclejdk8-maven-cmake-gcc
+    tag: latest
 
 inputs:
   - name: git-repo
 
-outputs:
-  - name: jar-file
-    path: git-repo/target
+#outputs:
+#  - name: jar-file
+#    path: git-repo/target/
 
 run:
   path: mvn
