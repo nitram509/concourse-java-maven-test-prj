@@ -5,7 +5,7 @@ This playground is intended to create a [CD](http://guide.agilealliance.org/guid
 
 The following requirements the pipeline must address:
 
-1. use [Concourse CI](http://concourse.ci/)
+1. use [Concourse CI](https://concourse-ci.org/)
 2. build a Java executable jar file
 3. optional: include a version number in the final file to run
 4. build a docker image
@@ -18,7 +18,7 @@ The following requirements the pipeline must address:
 
 ```
 # build java project
-maven package
+mvn package
 
 # prepare vagrant box
 vagrant init concourse/lite
