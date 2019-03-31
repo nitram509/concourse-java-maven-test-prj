@@ -3,7 +3,7 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: nitram509/alpine-oraclejdk8-maven-cmake-gcc
+    repository: nitram509/debian-openjdk8-maven-cmake-gcc
     tag: latest
 
 inputs:

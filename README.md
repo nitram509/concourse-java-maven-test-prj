@@ -25,5 +25,23 @@ vagrant init concourse/lite
 vagrant up
 
 # upload pipeline
-fly set-pipeline -p concourse-java-maven-test-prj -c ./pipeline.yml
+fly -t local set-pipeline -p concourse-java-maven-test-prj -c ./pipeline.yml
+```
+
+### Where do I get 'fly' from?
+
+As stated in the official [fly documentation](https://concourse-ci.org/fly.html),
+you can download or update your fly installation from any Concourse CI installation.
+
+With your vagrant image running, your Concourse CI should be accessible via http://192.168.100.4:8080/.
+Just download fly from there.
+
+Get a list of configured targets via
+
+```
+>>> fly targets
+
+name   url                        expiry
+local  http://192.168.100.4:8080  n/a
+
 ```
