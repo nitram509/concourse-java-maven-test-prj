@@ -36,12 +36,16 @@ you can download or update your fly installation from any Concourse CI installat
 With your vagrant image running, your Concourse CI should be accessible via http://192.168.100.4:8080/.
 Just download fly from there.
 
-Get a list of configured targets via
+First, add your local running Concourse CI as target
+```
+fly -t local login -c "http://192.168.100.4:8080/"
+```
 
+
+Get a list of configured targets via
 ```
 >>> fly targets
 
 name   url                        expiry
 local  http://192.168.100.4:8080  n/a
-
 ```
